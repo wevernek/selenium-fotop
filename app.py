@@ -28,7 +28,7 @@ chrome_options.add_argument("--disable-plugins")  # Desativa plugins
 chrome_options.add_argument("--disable-popup-blocking")  # Desativa bloqueio de popups
 chrome_options.add_argument("--disable-notifications")  # Desativa notificações
 chrome_options.add_argument("--disable-dev-shm-usage")  # Evita o uso do /dev/shm (memória compartilhada), útil para evitar problemas de espaço em ambientes Linux ou Docker
-# chrome_options.add_argument("--no-zygote")               # Impede o uso do processo zygote, reduzindo ainda mais a criação de processos
+chrome_options.add_argument("--no-zygote")               # Impede o uso do processo zygote, reduzindo ainda mais a criação de processos
 prefs = {"profile.managed_default_content_settings.images": 2}  # Bloqueia carregamento de imagens
 chrome_options.add_experimental_option("prefs", prefs)  # Aplica as preferências
 
